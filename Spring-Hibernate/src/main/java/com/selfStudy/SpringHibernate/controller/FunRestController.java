@@ -10,4 +10,9 @@ public class FunRestController {
     public String getName() {
         return "hello World!";
     }
+
+    @GetMapping("/secondController")
+    public String getInfo() {
+        return "Phan Vinh Khanh";
+    }
 }
