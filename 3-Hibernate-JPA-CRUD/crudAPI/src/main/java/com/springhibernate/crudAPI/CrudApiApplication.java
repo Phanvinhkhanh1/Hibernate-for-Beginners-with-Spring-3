@@ -18,8 +18,14 @@ public class CrudApiApplication {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
 //            createStudent(studentDAO);
-            createMultipleStudents(studentDAO);
+//            createMultipleStudents(studentDAO);
+            readStudent(studentDAO);
         };
+    }
+
+    private void readStudent(StudentDAO studentDAO) {
+        Student student = studentDAO.findStudentById(3);
+        System.out.println(student.toString());
     }
 
     private void createMultipleStudents(StudentDAO studentDAO) {
