@@ -22,8 +22,18 @@ public class CrudApiApplication {
 //            createStudent(studentDAO);
 //            createMultipleStudents(studentDAO);
 //            readStudent(studentDAO);
-            retrieveAllStudents(studentDAO);
+//            retrieveAllStudents(studentDAO);
+            retrieveAllStudentsWithLastName(studentDAO);
         };
+    }
+
+    private void retrieveAllStudentsWithLastName(StudentDAO studentDAO) {
+        String lastName = "Khanh";
+        List<Student> students = studentDAO.findStudentsByLastName(lastName);
+
+        for (Student student : students) {
+            System.out.println(student.toString());
+        }
     }
 
     private void retrieveAllStudents(StudentDAO studentDAO) {
