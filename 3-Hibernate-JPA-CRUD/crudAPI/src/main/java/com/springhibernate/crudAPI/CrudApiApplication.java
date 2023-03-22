@@ -24,8 +24,13 @@ public class CrudApiApplication {
 //            readStudent(studentDAO);
 //            retrieveAllStudents(studentDAO);
 //            retrieveAllStudentsWithLastName(studentDAO);
-            updateStudent(studentDAO);
+//            updateStudent(studentDAO);
+            deleteStudent(studentDAO);
         };
+    }
+
+    private void deleteStudent(StudentDAO studentDAO) {
+        studentDAO.deleteStudentById(3);
     }
 
     private void updateStudent(StudentDAO studentDAO) {
