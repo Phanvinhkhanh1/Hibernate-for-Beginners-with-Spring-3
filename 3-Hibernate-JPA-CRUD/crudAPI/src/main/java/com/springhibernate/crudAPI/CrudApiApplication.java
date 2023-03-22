@@ -23,8 +23,19 @@ public class CrudApiApplication {
 //            createMultipleStudents(studentDAO);
 //            readStudent(studentDAO);
 //            retrieveAllStudents(studentDAO);
-            retrieveAllStudentsWithLastName(studentDAO);
+//            retrieveAllStudentsWithLastName(studentDAO);
+            updateStudent(studentDAO);
         };
+    }
+
+    private void updateStudent(StudentDAO studentDAO) {
+        Student student = studentDAO.findStudentById(1);
+        System.out.println("Student with id = 1 is " + student.toString());
+        System.out.println("Updating student ...");
+        student.setEmail("Money@gmail.com");
+
+        studentDAO.update(student);
+        System.out.println("Student after update " + student.toString());
     }
 
     private void retrieveAllStudentsWithLastName(StudentDAO studentDAO) {
