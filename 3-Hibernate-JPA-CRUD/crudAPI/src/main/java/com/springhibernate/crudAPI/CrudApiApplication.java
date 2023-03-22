@@ -20,13 +20,13 @@ public class CrudApiApplication {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
 //            createStudent(studentDAO);
-//            createMultipleStudents(studentDAO);
+            createMultipleStudents(studentDAO);
 //            readStudent(studentDAO);
 //            retrieveAllStudents(studentDAO);
 //            retrieveAllStudentsWithLastName(studentDAO);
 //            updateStudent(studentDAO);
 //            deleteStudent(studentDAO);
-            deleteAllStudents(studentDAO);
+//            deleteAllStudents(studentDAO);
         };
     }
 
