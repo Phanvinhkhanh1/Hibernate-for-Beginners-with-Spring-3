@@ -25,8 +25,15 @@ public class CrudApiApplication {
 //            retrieveAllStudents(studentDAO);
 //            retrieveAllStudentsWithLastName(studentDAO);
 //            updateStudent(studentDAO);
-            deleteStudent(studentDAO);
+//            deleteStudent(studentDAO);
+            deleteAllStudents(studentDAO);
         };
+    }
+
+    private void deleteAllStudents(StudentDAO studentDAO) {
+        int numRowsDeleted = studentDAO.deleteStudents();
+
+        System.out.println("Number of row deleted = " + numRowsDeleted);
     }
 
     private void deleteStudent(StudentDAO studentDAO) {
